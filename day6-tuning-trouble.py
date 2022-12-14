@@ -1,4 +1,4 @@
-# packet is indicated by a sequence of four characters that are all different.
+# packet is indicated by a sequence of n characters that are all different.
 
 input_path = "input/day6.txt"
 input_file = open(input_path, "r")
@@ -6,7 +6,6 @@ input_file = open(input_path, "r")
 charset = set()
 l = 0
 
-# part 1
 for line in input_file.readlines():
     for i, r in enumerate(range(len(line))):
         while line[r] in charset:
